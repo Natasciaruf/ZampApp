@@ -1,26 +1,19 @@
+import Navbar from "./Components/Navbar"
+import Home from "./Pages.jsx/Home";
+import {Route, Routes} from "react-router-dom"
+
 function App() {
   
   return (
     <>
-    <div className="flex bg-gray-800/40 h-22 ">
-
-    
-    <div className=" w-20 h-20 flex gap-15">
-    <img  src=".\src\assets\Header\HeaderHeart.png" />
-    <img  src=".\src\assets\Header\HeaderNote.webp" />
-    <img  src=".\src\assets\Header\HeaderDog2.png" />
-    <img  src=".\src\assets\Header\HeaderHamburger.png" />
-
-      SCEGLI 1 DELLE 3 HOME
-
-    <img  src=".\src\assets\Header\HeaderHouse.png" />
-    <img  src=".\src\assets\Header\dog-house.png" />
-    <img  src=".\src\assets\Header\dog-house2.png" />
+    <Navbar/>
+    <Routes>
+    <Route path="/" element={<Home/>}/>
 
 
-    </div>
 
-    </div>
+
+    </Routes>
     </>
   )
 }
